@@ -1,0 +1,158 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+}
+
+.wrapper {
+    height: 100vh;
+    width: 100vw;
+    /* background-color: black; */
+    /* background: linear-gradient(to right, rgba(33, 29, 29, 0.904), black, rgb(44, 39, 39)); */
+    background-color: black;
+    position: relative;
+    display: grid;
+    place-items: center;
+
+}
+
+.box {
+    color: white;
+}
+
+.gameinfo {
+    color: white;
+    position: absolute;
+    top: 3rem;
+    background-color: rgba(104, 109, 115, 0.678);
+    width: 10em;
+    border-radius: .3em;
+    height: 1.7em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid grey;
+}
+
+.ttt {
+    box-shadow: 0 0 3em white;
+    position: absolute;
+    width: 90%;
+    max-width: 20rem;
+    border: 1px solid grey;
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+    background-color: rgba(255, 255, 255, 0.15);
+    border-radius: .5em;
+    aspect-ratio: 1/1;
+    /* height: 20em; */
+    padding: 1rem;
+
+}
+
+.box{
+    /* border: 1px solid red; */
+    cursor: pointer;
+    position: relative;
+    /* width: 100%; */
+    /* aspect-ratio: 1/1; */
+    font-size: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+}
+.box1 , .box2, .box4 , .box5 , .box7 , .box8{
+    border-right: 2px solid grey;
+    
+}
+.box1 , .box2, .box4 , .box5 , .box3 , .box6{
+    border-bottom: 2px solid grey;
+}
+/* .boxr {
+    border-right: 2px solid grey;
+}
+
+.boxb {
+    border-bottom: 2px solid grey;
+} */
+
+
+.btn {
+    cursor: pointer;
+    bottom: 3rem;
+    position: absolute;
+    border: 2px solid white;
+    color: white;
+    background: none;
+    border-radius: 2em;
+    width: 10em;
+    height: 3em;
+    transition: all .5s;
+    display: none;
+    z-index: 2;
+}
+
+.btn:hover {
+    background-color: white;
+    color: black;
+    box-shadow: 0 0 2em white;
+    font-weight: bold;
+}
+
+.btn.active {
+    display: block;
+}
+
+.win {
+    background-color: rgba(150, 196, 243, 0.678);
+
+}
+
+/* extra functionalities */
+.winning-display{
+    height: 15em;
+    width: 40em;
+    max-width:40em ;
+    background-color: rgba(33, 34, 35, 0.678);
+    /* color: white; */
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    border-radius: 1em;
+    display: none;
+    transition: 0.5s ease-in-out;
+}
+.winning-text{
+    font-size:3em ;
+    position: absolute;
+    top: 35%;
+    left: 20%;
+    z-index: 5;
+    font-weight: bold;
+
+}
+.winning-display.active{
+  display: block;
+}
+
+.overlay{
+    position: fixed;
+    background-color: #5e5a5a83;
+    top: 0;
+    opacity: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    pointer-events: none;
+    transition: 0.5s ease-in-out;
+    z-index: 1;}
+
+  .overlay.active{
+    opacity: 1;
+    /* pointer-events: initial; */
+  }
